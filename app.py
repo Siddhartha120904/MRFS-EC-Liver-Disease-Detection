@@ -18,35 +18,59 @@ model, scaler = load_assets()
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="LiverCare AI - Diagnostic Portal", layout="wide", page_icon="🏥")
 
-# --- ADVANCED CSS FOR STYLING ---
+# --- ADVANCED CSS FOR STYLING (OLIVE GREEN THEME) ---
 st.markdown("""
     <style>
+    /* Main background with Olive Green gradient */
     .stApp {
-        background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+        background: linear-gradient(135deg, #f1f3f0 0%, #a3b18a 100%);
     }
+    
+    /* Header Banner in Darker Olive Green */
     .header-banner {
-        background-color: #004a99;
+        background-color: #3a5a40;
         padding: 30px;
         border-radius: 15px;
-        color: white;
+        color: red;
         text-align: center;
         margin-bottom: 25px;
         box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
     }
+    
+    /* Result Card Styling */
     .result-box {
         padding: 30px;
         border-radius: 15px;
         text-align: center;
         margin-top: 20px;
-        color: white;
+        color: black;
         font-size: 26px;
         font-weight: bold;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    
+    /* Table Styling */
     .stTable {
-        background-color: white;
+        background-color: blue;
         border-radius: 10px;
         overflow: hidden;
+    }
+
+    /* Action Button in Olive Green */
+    .stButton>button {
+        background-color: #588157;
+        color: pink;
+        border-radius: 25px;
+        padding: 10px 25px;
+        font-weight: bold;
+        border: none;
+        transition: 0.3s;
+    }
+    
+    .stButton>button:hover {
+        background-color: #3a5a40;
+        color: #dad7cd;
+        transform: scale(1.02);
     }
     </style>
     """, unsafe_allow_html=True)
@@ -63,8 +87,6 @@ st.markdown("""
 st.image("https://images.unsplash.com/photo-1586773860418-d3b97978c65c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", 
          caption="City Central Hospital Integrated AI Lab", use_container_width=True)
 
-
-
 # --- MAIN INTERFACE ---
 col_img, col_form = st.columns([1, 2])
 
@@ -80,8 +102,6 @@ with col_img:
     # Liver Anatomy Image
     st.image("https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", 
              caption="Liver Anatomy Structure", width=300)
-
-
 
 with col_form:
     st.subheader("Laboratory Data Entry")
@@ -123,7 +143,7 @@ if st.button("RUN AI DIAGNOSTIC ANALYSIS", use_container_width=True):
         
         # UI Setup
         severity = {0: "MILD (Normal)", 1: "MODERATE (Observe)", 2: "SEVERE (Urgent)"}
-        colors = {0: "#28a745", 1: "#f39c12", 2: "#e74c3c"}
+        colors = {0: "#040905", 1: "#f39c12", 2: "#e74c3c"}
         
         # 1. Result Diagnosis Card
         st.markdown(f"""
@@ -141,7 +161,7 @@ if st.button("RUN AI DIAGNOSTIC ANALYSIS", use_container_width=True):
             "Clinical Target": ["Cellular Injury", "Biliary Function", "Protein Synthesis", "Metabolic Load"]
         })
         
-        st.table(summary_table) # Displaying the table with column names
+        st.table(summary_table)
 
         # 3. Clinical Recommendation
         if prediction == 2:
