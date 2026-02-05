@@ -91,7 +91,7 @@ st.image("https://images.unsplash.com/photo-1586773860418-d3b97978c65c?ixlib=rb-
 col_img, col_form = st.columns([1, 2])
 
 with col_img:
-    st.image("https://cdn-icons-png.flaticon.com/512/508/508791.png", width=180) # Liver Icon
+    st.image("https://t3.ftcdn.net/jpg/07/69/55/88/240_F_769558846_l3UvsH8MGsMTuvCY3FiF1Z1AzCuvAEfx.jpg", width=180) # Liver Icon
     st.markdown("### Clinical Evaluation")
     st.info("""
     **Hepatology Metrics:**
