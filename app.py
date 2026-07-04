@@ -344,7 +344,7 @@ with right:
             3000.0,
             150.0
         )
-            with col2:
+    with col2:
 
         tp = st.number_input(
             "Total Proteins (g/dL)",
