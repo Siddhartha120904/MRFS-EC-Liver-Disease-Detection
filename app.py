@@ -225,100 +225,113 @@ select{
 
 }
 
-/* ===============================
-   METRICS
-================================= */
+/* =====================================
+   METRIC CARDS
+===================================== */
 
 [data-testid="stMetric"]{
-
-    background:white;
-
+    background:#FFFFFF !important;
     border-radius:15px;
-
-    padding:15px;
-
-    box-shadow:0px 5px 15px rgba(0,0,0,.08);
-
+    padding:18px;
+    border:1px solid #DCE6F2;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.08);
 }
 
-/* ===============================
+/* Metric label */
+
+[data-testid="stMetricLabel"]{
+    color:#2C3E50 !important;
+    font-weight:600;
+}
+
+/* Metric value */
+
+[data-testid="stMetricValue"]{
+    color:#000000 !important;
+    font-size:28px !important;
+    font-weight:700;
+}
+
+/* Metric delta */
+
+[data-testid="stMetricDelta"]{
+    color:#2F80ED !important;
+}
+
+/* =====================================
    RESULT CARD
-================================= */
+===================================== */
 
 .result-box{
-
     padding:30px;
-
     border-radius:18px;
-
-    color:white;
-
+    color:#FFFFFF !important;
     font-size:30px;
-
     font-weight:bold;
-
     text-align:center;
-
     box-shadow:0px 8px 25px rgba(0,0,0,.15);
-
 }
 
-/* ===============================
+/* =====================================
    DATAFRAME
-================================= */
+===================================== */
 
 [data-testid="stDataFrame"]{
-
-    background:white;
-
+    background:#FFFFFF !important;
     border-radius:15px;
+    color:#000000 !important;
+}
 
+table{
+    color:#000000 !important;
 }
 
 thead tr th{
-
     background:#2F80ED !important;
-
-    color:white !important;
-
+    color:#FFFFFF !important;
 }
 
 tbody tr td{
-
-    background:white !important;
-
-    color:#2C3E50 !important;
-
+    background:#FFFFFF !important;
+    color:#000000 !important;
 }
 
-/* ===============================
-   SUCCESS / INFO / WARNING
-================================= */
+/* =====================================
+   INFO / SUCCESS / WARNING / ERROR
+===================================== */
+
+[data-testid="stInfo"]{
+    background:#EAF4FF !important;
+    color:#000000 !important;
+    border-left:6px solid #2F80ED;
+}
 
 [data-testid="stSuccess"]{
-
+    background:#EAFBF2 !important;
+    color:#000000 !important;
     border-left:6px solid #27AE60;
-
 }
 
 [data-testid="stWarning"]{
-
+    background:#FFF8E8 !important;
+    color:#000000 !important;
     border-left:6px solid #F2994A;
-
 }
 
 [data-testid="stError"]{
-
+    background:#FDECEC !important;
+    color:#000000 !important;
     border-left:6px solid #EB5757;
-
 }
 
-[data-testid="stInfo"]{
+/* Force text inside alert boxes */
 
-    border-left:6px solid #2F80ED;
-
+[data-testid="stInfo"] *,
+[data-testid="stSuccess"] *,
+[data-testid="stWarning"] *,
+[data-testid="stError"] *{
+    color:#000000 !important;
 }
-
 /* ===============================
    IMAGES
 ================================= */
