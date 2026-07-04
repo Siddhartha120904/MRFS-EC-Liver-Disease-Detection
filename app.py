@@ -35,190 +35,319 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* Google Font */
+/* ===============================
+   GOOGLE FONT
+================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 html, body, [class*="css"]{
-    font-family: 'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
-/* Background */
+/* ===============================
+   APP BACKGROUND
+================================= */
 
 .stApp{
-
-background:#F5F8FC;
-
+    background:#F4F8FC;
 }
 
-/* Header */
+/* ===============================
+   HEADER
+================================= */
 
 .header{
-
-background:linear-gradient(90deg,#2F80ED,#56CCF2);
-
-padding:30px;
-
-border-radius:18px;
-
-text-align:center;
-
-color:white;
-
-box-shadow:0px 10px 30px rgba(0,0,0,.15);
-
-margin-bottom:25px;
-
+    background:linear-gradient(90deg,#2F80ED,#56CCF2);
+    padding:28px;
+    border-radius:18px;
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+    box-shadow:0px 8px 25px rgba(0,0,0,.15);
 }
 
 .header h1{
-
-font-size:42px;
-
-font-weight:700;
-
-margin-bottom:8px;
-
-color:white;
-
+    color:white;
+    font-size:42px;
+    font-weight:700;
+    margin:0;
 }
 
 .header p{
-
-font-size:18px;
-
-color:#f7f7f7;
-
+    color:#F8F9FA;
+    font-size:18px;
+    margin-top:10px;
 }
 
-/* Card */
+/* ===============================
+   CARD
+================================= */
 
 .card{
-
-background:white;
-
-padding:25px;
-
-border-radius:18px;
-
-box-shadow:0px 6px 20px rgba(0,0,0,.08);
-
-margin-bottom:20px;
-
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0px 6px 18px rgba(0,0,0,.08);
+    margin-bottom:20px;
 }
 
-/* Button */
+/* ===============================
+   BUTTON
+================================= */
 
 .stButton>button{
 
-width:100%;
+    width:100%;
+    height:55px;
 
-height:58px;
+    background:linear-gradient(90deg,#2F80ED,#4F9DDE);
 
-border:none;
+    color:white !important;
 
-border-radius:12px;
+    border:none;
 
-background:linear-gradient(90deg,#2F80ED,#4F9DDE);
+    border-radius:10px;
 
-color:white;
+    font-size:18px;
 
-font-size:20px;
+    font-weight:600;
 
-font-weight:600;
-
-transition:.3s;
+    transition:0.3s;
 
 }
 
 .stButton>button:hover{
 
-transform:scale(1.02);
+    background:linear-gradient(90deg,#1F6FD0,#2F80ED);
 
-background:linear-gradient(90deg,#1B66C9,#2F80ED);
+    color:white !important;
 
-color:white;
+    transform:scale(1.02);
 
 }
 
-/* Inputs */
+/* ===============================
+   LABELS
+================================= */
+
+label{
+
+    color:#2C3E50 !important;
+
+    font-weight:600 !important;
+
+}
+
+/* ===============================
+   NUMBER INPUT
+================================= */
 
 .stNumberInput input{
 
-border-radius:10px;
+    background:#FFFFFF !important;
 
-border:1px solid #D7E6F4;
+    color:#000000 !important;
 
-background:white;
+    -webkit-text-fill-color:#000000 !important;
+
+    border:1px solid #D6E4F0 !important;
+
+    border-radius:10px !important;
+
+    font-size:16px !important;
 
 }
+
+/* ===============================
+   TEXT INPUT
+================================= */
+
+.stTextInput input{
+
+    background:#FFFFFF !important;
+
+    color:#000000 !important;
+
+    -webkit-text-fill-color:#000000 !important;
+
+}
+
+/* ===============================
+   SELECT BOX
+================================= */
 
 .stSelectbox div[data-baseweb="select"]{
 
-border-radius:10px;
+    background:#FFFFFF !important;
+
+    color:#000000 !important;
+
+    border-radius:10px;
+
+    border:1px solid #D6E4F0 !important;
 
 }
 
-/* Metric */
+.stSelectbox div[data-baseweb="select"] *{
 
-.metric-card{
-
-background:white;
-
-padding:20px;
-
-text-align:center;
-
-border-radius:15px;
-
-box-shadow:0px 5px 15px rgba(0,0,0,.08);
+    color:#000000 !important;
 
 }
 
-/* Result */
+/* ===============================
+   FORCE INPUT TEXT BLACK
+================================= */
+
+input,
+textarea,
+select{
+
+    color:#000000 !important;
+
+    -webkit-text-fill-color:#000000 !important;
+
+}
+
+[data-baseweb="input"] input{
+
+    color:#000000 !important;
+
+    -webkit-text-fill-color:#000000 !important;
+
+}
+
+[data-baseweb="base-input"] input{
+
+    color:#000000 !important;
+
+    -webkit-text-fill-color:#000000 !important;
+
+}
+
+/* ===============================
+   METRICS
+================================= */
+
+[data-testid="stMetric"]{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    box-shadow:0px 5px 15px rgba(0,0,0,.08);
+
+}
+
+/* ===============================
+   RESULT CARD
+================================= */
 
 .result-box{
 
-padding:30px;
+    padding:30px;
 
-border-radius:18px;
+    border-radius:18px;
 
-text-align:center;
+    color:white;
 
-font-size:30px;
+    font-size:30px;
 
-font-weight:bold;
+    font-weight:bold;
 
-color:white;
+    text-align:center;
 
-margin-top:20px;
-
-box-shadow:0px 8px 25px rgba(0,0,0,.15);
+    box-shadow:0px 8px 25px rgba(0,0,0,.15);
 
 }
 
-/* Tables */
+/* ===============================
+   DATAFRAME
+================================= */
+
+[data-testid="stDataFrame"]{
+
+    background:white;
+
+    border-radius:15px;
+
+}
 
 thead tr th{
 
-background:#2F80ED !important;
+    background:#2F80ED !important;
 
-color:white !important;
+    color:white !important;
 
 }
 
 tbody tr td{
 
-background:white !important;
+    background:white !important;
 
-color:#2C3E50 !important;
+    color:#2C3E50 !important;
 
 }
 
-/* Images */
+/* ===============================
+   SUCCESS / INFO / WARNING
+================================= */
+
+[data-testid="stSuccess"]{
+
+    border-left:6px solid #27AE60;
+
+}
+
+[data-testid="stWarning"]{
+
+    border-left:6px solid #F2994A;
+
+}
+
+[data-testid="stError"]{
+
+    border-left:6px solid #EB5757;
+
+}
+
+[data-testid="stInfo"]{
+
+    border-left:6px solid #2F80ED;
+
+}
+
+/* ===============================
+   IMAGES
+================================= */
 
 img{
 
-border-radius:15px;
+    border-radius:15px;
+
+}
+
+/* ===============================
+   REMOVE STREAMLIT MENU
+================================= */
+
+#MainMenu{
+
+    visibility:hidden;
+
+}
+
+footer{
+
+    visibility:hidden;
+
+}
+
+header{
+
+    visibility:hidden;
 
 }
 
